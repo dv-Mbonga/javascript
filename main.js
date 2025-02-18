@@ -1,74 +1,53 @@
-// Variaveis
-// Vamos ver somente variaveis mais basicas, e o estudo sera incremental cada vez que sentirmos necessidade de implementar algo explicaremos e aplicaremos.
+// listas
 
-// var não é a forma mais legar de declarar variaveis
-/*
-if(1 + 1 === 2){
-    var message = 'Hello world!'
-}
+const names = ["Leonardo", "Juliana", "Bernardo", "André", 10, false];
 
-alert(message)
-*/
+const Juliana = names[1];
 
-/*
-const messageConst = 'Hello world!'
+console.log(Juliana)
 
-//isso gera um erro porque const são constantes e são imutáveis
-messageConst = 'Ola mundo!'
-*/
+// Adicionando nomes no final da lista
+names.push('Lurdes')
 
-//String
-
-const firstName = 'Leonardo'
-const lastName = "Di Caprio"
-
-//Concatenando Strings
-console.log('Meu nome é ' + firstName + ' ' + lastName)
-
-//Outra forma seria usando template strings
-
-console.log(`Meu nome eh ${firstName} ${lastName}`)
-
-// Existem metodos que ajudam a manipular a string
-// toUpperCase() - Exibir toda string em maiusculo
-// toLoweCase() - Exibir toda string em minusculo
-
-console.log(`Meu nome é ${firstName.toUpperCase()} ${lastName.toLocaleLowerCase()}`)
-console.log(`Meu nome é ${firstName.toLowerCase()} ${lastName.toUpperCase()}`)
-
-// Tambem temos os metodos split 
-// split basicamente corta a string em listas
-
-const names = 'Leonardo,Baião,Juliana';
-
-console.log(names.split(","))
+console.log(names)
 
 
-const name = `Leonardo`;
+// Adicionando dado no inicio da lista
 
-console.log(name.split(""))
+names.unshift(20)
 
-// Numbers
-const number = 5;
+console.log(names)
 
-console.log(Number.toString())
-console.log(typeof number)
-console.log(typeof number.toString())
+names.unshift("Fernanda")
 
-// Booleanos
+console.log(names)
 
-console.log( 2 == 3)
-console.log(2 == 2)
+// Metodo pop() remove o ultimo valor ou dado de uma lista
 
-// Null e undefined
+names.pop()
 
-const x = null;
-const y = undefined;
+console.log(names)
 
-// Listas
+names.pop()
 
-const list = [1, 2, 3, 4, 5]
+console.log(names)
 
-// Objectos
+// Saber o indice de determinado elemento
 
-const Object = {name: "Leonardo"}
+console.log(names.indexOf('Bernardo'))
+
+// Ordernar a lista de forma alfabetica
+
+const ordenarNames = names.sort();
+
+console.log(ordenarNames)
+
+// Verificar quantos itens a lista possui
+
+console.log(names.length)
+
+// verificar se determinada variavel é uma lista
+
+const namesIsArray = Array.isArray(names)
+
+console.log(namesIsArray)
